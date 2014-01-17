@@ -5,14 +5,9 @@ require 'json'
 require 'pry'
 
 
-
-
 get '/' do
- 
   erb :index
 end
-
-
 
 
 post '/result' do
