@@ -1,15 +1,15 @@
 .main{
 	background-image: url('http://i44.tinypic.com/2gu9sab.jpg');
 	background-size: 110%;
-
 	background-repeat: no-repeat;
-	font-family: 'Petrona', serif;
+	font-family: 'Petrona', serif; 
+
 }
 
 .container
 {
 	padding: 20px;
-	width: 70%;
+	width: 75%;
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -20,10 +20,18 @@
 	font-size: 28px;
 	vertical-align: middle;
 	border-radius: 5px;
+	margin-top: 200px;
 }
 
-/*
-.form {
-	background-color: purple;
-	height: 35px;
-}  */
+
+ul
+{
+
+	margin: 10px;
+	font-size: 18px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+a {
+color: #330066;
+}

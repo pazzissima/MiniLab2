@@ -16,18 +16,22 @@ post '/result' do
   result = JSON.parse(response.body)
 
   @movies = result["Search"]
-
-erb :result
+  if @movies
+  	erb :result
+  else
+  	"No movies found."
+  end
 end
+
 
 
 get '/poster/:imdb' do |imdb_id|
   id = params[:imdb]
-  response_ID = Typhoeus.get("http://www.omdbapi.com", :params => {:i => id})
-  result_ID =JSON.parse(response_ID.body)
+  response = Typhoeus.get("http://www.omdbapi.com", :params => {:i => id}) # retrieve data from OMDB service endpoint
+  result =JSON.parse(response.body) # convert the response body (JSON-formatted) into a Ruby object
 
-  @movie = movies[id]
+  @poster = result["Poster"]
+  
 erb :show
 
 end
-
